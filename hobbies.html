@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hobbies – Lucy Cai</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Optional smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar placeholder */
+    #navbar-placeholder { min-height: 60px; }
+
+    .hobbies-intro {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 1.2rem;
+    }
+
+    .hobbies-intro a {
+      color: #0077cc;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .hobbies-intro a.active {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .hobby-section {
+      margin: 3rem 0;
+    }
+
+    .hobby-section h2 {
+      margin-bottom: 1rem;
+    }
+
+    /* Project grid spacing */
+    .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem; /* reduced gap from 2rem to 1rem */
+    margin-top: 0.5rem; /* slightly less top margin */
+    }
+
+    /* Project styling */
+    .project {
+    text-align: center;
+    margin-bottom: 0.5rem; /* reduce vertical space between projects */
+    }
+
+    /* Unbold project titles */
+    .project-title {
+    font-weight: normal; /* unbold */
+    margin-bottom: 0.5rem; /* reduce spacing under title */
+    }
+
+    .carousel {
+    position: relative;
+    }
+
+    .carousel img {
+    width: 100%;            /* fill width of carousel container */
+    aspect-ratio: 9 / 13;   /* forces the height to match 9:19 ratio */
+    object-fit: cover;      /* crops the image to fill the space without distortion */
+    display: none;
+    }
+
+    .carousel img.active {
+    display: block;
+    }
+
+    .carousel .prev,
+    .carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.2);
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    }
+
+    .carousel .prev:hover,
+    .carousel .next:hover {
+    background: rgba(0,0,0,0.4);
+    }
+
+    .carousel .prev { left: 5px; }
+    .carousel .next { right: 5px; }
+  </style>
+</head>
+<body>
+  <header id="navbar-placeholder"></header>
+
+  <main class="content">
+    <!-- Intro sentence with links -->
+    <p class="hobbies-intro">
+      I enjoy 
+      <a href="#woodworking" id="link-woodworking">woodworking</a>, 
+      <a href="#writing" id="link-writing">creative writing</a>, and 
+      <a href="#dj" id="link-dj">learning to DJ</a>.
+    </p>
+
+    <!-- Hobby Sections -->
+    <section id="woodworking" class="hobby-section">
+    <h2>Woodworking</h2>
+    <p>I started woodworking at the <a href="https://studentlife.mit.edu/campus-communities/hobby-shop/">
+        MIT Hobby Shop</a> in sophomore year of undergrad with my friend Willow Huang. 
+        Though neither of us came in with any experience, we were lucky to have Coby Unger and 
+        Hayami Arakawa to mentor us through all the projects we embarked on. 
+        Here are a few:</p>
+
+    <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project">
+        <h3 class="project-title">Double Sided Coasters</h3>
+        <div class="carousel">
+            <img src="images/chopsticks.JPG" class="active" alt="Chopsticks photo 1">
+            <img src="images/chopsticks2.JPG" alt="Chopsticks photo 2">
+            <img src="images/chopsticks3.JPG" alt="Chopsticks photo 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+        <h3 class="project-title">Checkered Cutting Board</h3>
+        <div class="carousel">
+            <img src="images/cuttingboard.jpeg" class="active" alt="Cutting board photo 1">
+            <img src="images/cuttingboard2.JPG" alt="Cutting board photo 2">
+            <img src="images/cuttingboard3.JPG" alt="Cutting board photo 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+        <h3 class="project-title">Butterfly Stool</h3>
+        <div class="carousel">
+            <img src="images/stool.JPG" class="active" alt="Stool photo 1">
+            <img src="images/stool2.JPG" alt="Stool photo 2">
+            <img src="images/stool3.JPG" alt="Stool photo 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project">
+        <h3 class="project-title">Hand Carved Chopsticks</h3>
+        <div class="carousel">
+            <img src="images/chopsticks.JPG" class="active" alt="Chopsticks photo 1">
+            <img src="images/chopsticks2.JPG" alt="Chopsticks photo 2">
+            <img src="images/chopsticks3.JPG" alt="Chopsticks photo 3">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="writing" class="hobby-section">
+      <h2>Creative Writing</h2>
+      <p>I enjoy writing short stories, poems, and journalistic pieces.
+        In addition to my blog, check out some of my writing in The Tech, MIT's student newspaper,
+        below.
+      </p>
+      <ul>
+        <li><a href="https://thetech.com/2024/12/12/y2k-review" target="_blank">(ARTS) Y2K, unlike its historic counterpart, is full of surprises, funny moments, and bloody endings</a></li>
+        <li><a href="https://thetech.com/2025/01/23/karissa-chen-homeseeking" target="_blank">(ARTS) Karissa Chen debuts her first novel, Homeseeking, at the Harvard Book Store</a></li>
+        <li><a href="https://thetech.com/2025/02/06/bred-gourmet-lunch" target="_blank">(ARTS) BRED Gourmet’s Smoked Burgers Come to Kendall Square</a></li>
+        <li><a href="https://thetech.com/2025/02/20/kornbluth-interview-feb-2025" target="_blank">(NEWS) President Kornbluth addresses the Trump administration, generative AI, and future of the Institute</a></li>
+    </ul>
+    </section>
+
+    <section id="dj" class="hobby-section">
+      <h2>DJing</h2>
+      <p>I am just recently learning how to DJ.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lucy Cai</p>
+  </footer>
+
+  <!-- Navbar include -->
+  <script src="nav.js"></script>
+  <script>
+    const ph = document.getElementById('navbar-placeholder');
+    if (window.NAV_HTML) {
+      ph.innerHTML = window.NAV_HTML;
+      const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+      ph.querySelectorAll('.nav-links a[href]').forEach(a => {
+        const href = a.getAttribute('href');
+        if (href && !/^https?:/i.test(href) && href.toLowerCase() === current) {
+          a.classList.add('active');
+        }
+      });
+    }
+  </script>
+
+  <!-- Scroll highlight script -->
+  <script>
+    const sections = [
+      { id: 'woodworking', linkId: 'link-woodworking' },
+      { id: 'writing', linkId: 'link-writing' },
+      { id: 'web', linkId: 'link-web' }
+    ];
+
+    function updateActiveLink() {
+      const scrollPos = window.scrollY + 100; // adjust offset
+      let currentSection = sections[0];
+      for (let s of sections) {
+        const section = document.getElementById(s.id);
+        if (section.offsetTop <= scrollPos) {
+          currentSection = s;
+        }
+      }
+      sections.forEach(s => {
+        const link = document.getElementById(s.linkId);
+        if (link) link.classList.toggle('active', s.id === currentSection.id);
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    window.addEventListener('load', updateActiveLink);
+
+        document.querySelectorAll('.carousel').forEach(carousel => {
+    const images = carousel.querySelectorAll('img');
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((img, i) => img.classList.toggle('active', i === index));
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+    });
+  </script>
+</body>
+</html>
