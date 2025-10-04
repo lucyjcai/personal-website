@@ -1,2 +1,1 @@
-# personal-website
-Hosting my personal website.
+Welcome to my website!
