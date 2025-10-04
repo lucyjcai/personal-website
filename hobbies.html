@@ -122,7 +122,7 @@
 
     <div class="project-grid">
         <!-- Project 1 -->
-        <div class="project">
+        <!-- <div class="project">
         <h3 class="project-title">Double Sided Coasters</h3>
         <div class="carousel">
             <img src="images/chopsticks.JPG" class="active" alt="Chopsticks photo 1">
@@ -131,7 +131,7 @@
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
         </div>
-        </div>
+        </div> -->
 
         <!-- Project 2 -->
         <div class="project">
@@ -151,7 +151,7 @@
         <div class="carousel">
             <img src="images/stool.JPG" class="active" alt="Stool photo 1">
             <img src="images/stool2.JPG" alt="Stool photo 2">
-            <img src="images/stool3.JPG" alt="Stool photo 3">
+            <!-- <img src="images/stool3.JPG" alt="Stool photo 3"> -->
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
         </div>
@@ -187,13 +187,9 @@
 
     <section id="dj" class="hobby-section">
       <h2>DJing</h2>
-      <p>I am just recently learning how to DJ.</p>
+      <p>I am just recently learning how to DJ. Stay tuned for samples. </p>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Lucy Cai</p>
-  </footer>
 
   <!-- Navbar include -->
   <script src="nav.js"></script>
@@ -201,7 +197,7 @@
     const ph = document.getElementById('navbar-placeholder');
     if (window.NAV_HTML) {
       ph.innerHTML = window.NAV_HTML;
-      const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+      const current = (location.pathname.split('/').pop() || 'main.html').toLowerCase();
       ph.querySelectorAll('.nav-links a[href]').forEach(a => {
         const href = a.getAttribute('href');
         if (href && !/^https?:/i.test(href) && href.toLowerCase() === current) {

@@ -5,30 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume – Lucy Cai</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      text-align: center;
+    /* Optional smooth scrolling */
+    html {
+      scroll-behavior: smooth;
     }
+
+    /* Navbar placeholder */
+    #navbar-placeholder { min-height: 60px; }
+
+    main {
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 1000px;
+    }
+
     iframe {
-      width: 80%;
+      width: 100%;
       height: 90vh;
       border: none;
     }
+
     .download-link {
       display: block;
       margin-top: 1rem;
       font-size: 1.1rem;
+      color: #0077cc;
+      text-decoration: underline;
+    }
+
+    .download-link:hover {
+      color: #000;
     }
   </style>
 </head>
 <body>
   <header id="navbar-placeholder"></header>
 
-  <main>
-    <h1>My Resume</h1>
+  <main class="content">
+
     <!-- Embed resume PDF -->
     <iframe src="resume.pdf"></iframe>
 
@@ -36,11 +52,20 @@
     <a class="download-link" href="resume.pdf" download>Download Resume (PDF)</a>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Lucy Cai</p>
-  </footer>
-
   <!-- Navbar include -->
   <script src="nav.js"></script>
+  <script>
+    const ph = document.getElementById('navbar-placeholder');
+    if (window.NAV_HTML) {
+      ph.innerHTML = window.NAV_HTML;
+      const current = (location.pathname.split('/').pop() || 'main.html').toLowerCase();
+      ph.querySelectorAll('.nav-links a[href]').forEach(a => {
+        const href = a.getAttribute('href');
+        if (href && !/^https?:/i.test(href) && href.toLowerCase() === current) {
+          a.classList.add('active');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
