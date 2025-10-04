@@ -4,7 +4,7 @@ window.NAV_HTML = `
   <div class="logo">Lucy Cai</div>
   <ul class="nav-links">
     <li><a href="main.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resume.html">Resume</a></li>
     <li><a href="hobbies.html">Hobbies</a></li>
     <li><a href="https://medium.com/@lucyjcai" target="_blank" rel="noopener">Blog</a></li>
     <li>
