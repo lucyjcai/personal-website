@@ -16,11 +16,6 @@ window.NAV_HTML = `
         <i class="fab fa-github"></i>
       </a>
     </li>
-    <li>
-      <a href="https://www.instagram.com/lucyj_c/" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
   </ul>
 </nav>
 `;
