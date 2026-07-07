@@ -2,7 +2,7 @@
 window.NAV_HTML = `
 <nav class="navbar">
   <ul class="nav-links">
-    <li><a href="main.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="resume.html">Resume</a></li>
     <li><a href="hobbies.html">Hobbies</a></li>
     <li><a href="https://medium.com/@lucyjcai" target="_blank" rel="noopener">Blog</a></li>
