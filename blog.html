@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Blog – Lucy Cai</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Navbar placeholder */
+    #navbar-placeholder { min-height: 60px; }
+
+    .blog-placeholder {
+      text-align: center;
+      margin: 6rem auto;
+      font-size: 1.2rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header id="navbar-placeholder"></header>
+
+  <main class="content">
+    <p class="blog-placeholder">First article coming soon.</p>
+  </main>
+
+  <!-- Navbar include -->
+  <script src="nav.js"></script>
+  <script>
+    const ph = document.getElementById('navbar-placeholder');
+    if (window.NAV_HTML) {
+      ph.innerHTML = window.NAV_HTML;
+      const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+      ph.querySelectorAll('.nav-links a[href]').forEach(a => {
+        const href = a.getAttribute('href');
+        if (href && !/^https?:/i.test(href) && href.toLowerCase() === current) {
+          a.classList.add('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
